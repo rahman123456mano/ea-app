@@ -1,0 +1,103 @@
+<!-- extend base layout -->
+{% extends "index_base.html" %}
+
+{% block head_css %}
+        {{ super() }}
+        <link href="{{url_for('static',filename='css/custom.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div id="Animation-Carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+       <li data-target="#Animation-Carousel" data-slide-to="0" class="active"></li>
+       <li data-target="#Animation-Carousel" data-slide-to="1" ></li>
+       <li data-target="#Animation-Carousel" data-slide-to="2" ></li>
+        <li data-target="#Animation-Carousel" data-slide-to="3" ></li>
+        <li data-target="#Animation-Carousel" data-slide-to="4" ></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="jumbotron" style="background: url('static/img/poster.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1 style="color:red;"><i class="fa fa-address-card" aria-hidden="true"></i>Welcome MCL Cinema!</h1>
+            <p style="color:red;">{{_("Multiplex Cinema Limited (MCL) was formed in 1982 to provide local audience with the best movie-going experience. ")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg" href="aboutus.html"
+                 role="button">{{_("Go Watch About Us!")}} <i class="fa fa-star"></i></a></p>
+            </center>
+            </div>
+           </div>
+        </div>
+
+        <div class="item">
+            <div class="jumbotron" style="background: url('static/img/movie.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1 style="color:red;"><i class="fa fa-film"></i> {{_("Choose Movie")}}</h1>
+                <p style="color:red;">{{_("What Movie do you watch?Please Choose Your Favourite!")}}</p>
+            <center>
+                <p><a class="btn btn-primary btn-lg" href="Movie.html" role="button">{{_("Go In Choose Your Movie!")}}<i class="fa fa-angellist"></i></a></p>
+            </center>
+            </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="jumbotron" style="background: url('static/img/cinema.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1 style="color:red;"><i class="fa fa-video"></i> {{_("Choose Cinema")}}</h1>
+            <p style="color:red;">{{_("You Want Watch Movie?May Have Cinema In Your Nearby!")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg" href="Cinema.html" role="button">{{_("Go In Choose Cinema!")}}<i class="fa fa-bolt"></i></a></p>
+            </center>
+            </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="jumbotron" style="background: url('static/img/news.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1 style="color:red;"><i class="fa fa-play"></i> {{_("News")}}</h1>
+            <p style="color:red;">{{_("We Have What New Promoion?Come In To See That!")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg"  href="login" role="button">{{_("Let You Get News!")}} <i class="fa fa-newspaper"></i></a></p>
+            </center>
+            </div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="jumbotron" style="background: url('static/img/login.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1 style="color:red;"><i class="fa fa-play"></i> {{_("Member System")}}</h1>
+            <p style="color:red;">{{_("You want take we promotion?Please Login!")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg"  href="login" role="button">{{_("Login")}} <i class="fa fa-sign-in"></i></a></p>
+            </center>
+            </div>
+            </div>
+        </div>
+        
+</div>
+
+    <!-- Controls -->
+  <a class="left carousel-control" href="#Animation-Carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#Animation-Carousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+</div>
+
+<h2 class="section-title">即日上映</h2>
+<table>
+  <tr>
+<th><img src="static/img/An Elephant Sitting Still.jpg" alt="An Elephant Sitting Still"></th>
+<th><img src="static/img/An Elephant Sitting Still.jpg" alt="An Elephant Sitting Still"></th>
+<th><img src="static/img/An Elephant Sitting Still.jpg" alt="An Elephant Sitting Still"></th>
+<th><img src="static/img/An Elephant Sitting Still.jpg" alt="An Elephant Sitting Still"></th>
+				</li><li style="float: left;">
+ </tr>
+{% endblock %}
